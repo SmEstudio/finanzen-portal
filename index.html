@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinanZen - Guías de Finanzas Personales, Inversión y Calculadoras</title>
+  <meta name="description" content="Aprende a gestionar tu dinero, calcular el interés compuesto, planificar tu fondo de emergencia e invertir en fondos indexados con guías prácticas y calculadoras gratuitas.">
+  <meta name="keywords" content="finanzas personales, interes compuesto calculadora, fondos indexados, regla 50 30 20, fondo de emergencia, inversion para principiantes">
+  <link rel="canonical" href="https://finanzen-portal.com/">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FinanZen - Finanzas Personales e Inversión Inteligente">
+  <meta property="og:description" content="Guías paso a paso y herramientas interactivas para hacer crecer tu patrimonio de forma segura.">
+  <meta property="og:url" content="https://finanzen-portal.com/">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Estilos y Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23047857'/><text y='70' x='50' text-anchor='middle' font-size='60'>📈</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FinanZen",
+    "url": "https://finanzen-portal.com/",
+    "description": "Portal educativo de finanzas personales, calculadoras interactivas y estrategias de ahorro.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://finanzen-portal.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Encabezado Principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📈</div>
+        Finan<span>Zen</span>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="herramientas/index.html">Calculadoras</a></li>
+          <li><a href="articulos/interes-compuesto-guia.html">Interés Compuesto</a></li>
+          <li><a href="articulos/fondos-indexados-principiantes.html">Inversión</a></li>
+          <li><a href="articulos/fondo-de-emergencia-paso-a-paso.html">Ahorro</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bloque AdSense Superior -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box header-banner" data-ad-slot="header"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge">Educación Financiera Práctica</span>
+        <h1>Toma el Control Total de tu Dinero y Multiplica tu Patrimonio</h1>
+        <p>Guías claras, estrategias comprobadas de inversión pasiva y calculadoras interactivas diseñadas para ayudarte a alcanzar la libertad financiera sin complicaciones.</p>
+        <div class="hero-cta">
+          <a href="#calculadora-principal" class="btn btn-primary">Simular Mi Patrimonio</a>
+          <a href="articulos/interes-compuesto-guia.html" class="btn btn-secondary">Leer Guía Básica</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker Tape FinTech -->
+  <div class="ticker-tape" style="background: #022c22; color: #f8fafc; padding: 11px 0; font-size: 0.85rem; border-bottom: 2px solid #b45309; overflow: hidden;">
+    <div class="container" style="display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #34d399;">▲ S&amp;P 500</strong> 5,860.20 (+0.8%)</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #34d399;">▲ MSCI World</strong> 3,742.15 (+0.6%)</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #fbbf24;">⚡ Inflación</strong> 2.4% Interanual</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #93c5fd;">🏛️ Tipos BCE</strong> 3.25%</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #fde68a;">💎 Interés Compuesto</strong> Exponencial</span>
+    </div>
+  </div>
+
+  <!-- Contenido Central con Barra Lateral -->
+  <main class="container">
+    <div class="main-layout">
+      
+      <!-- Columna Principal -->
+      <div class="content-area">
+        
+        <!-- Herramienta Interactiva Destacada -->
+        <section id="calculadora-principal" class="calculator-box">
+          <div class="badge">Herramienta Interactiva</div>
+          <h2 class="calculator-title">Calculadora de Interés Compuesto en Tiempo Real</h2>
+          <p class="calculator-desc">Descubre cuánto crecerá tu capital a largo plazo gracias a la reinversión de los rendimientos generados.</p>
+
+          <form id="compound-calc-form" onsubmit="event.preventDefault();">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+              <div class="form-group">
+                <label for="calc-initial">Capital Inicial (€):</label>
+                <div class="input-desc">Monto con el que comienzas</div>
+                <input type="number" id="calc-initial" class="input-control" value="2000" min="0" step="100">
+              </div>
+
+              <div class="form-group">
+                <label for="calc-monthly">Aportación Mensual (€):</label>
+                <div class="input-desc">Ahorro periódico cada mes</div>
+                <input type="number" id="calc-monthly" class="input-control" value="250" min="0" step="25">
+              </div>
+
+              <div class="form-group">
+                <label for="calc-rate">Rentabilidad Anual Estimada (%):</label>
+                <div class="input-desc">Promedio histórico bolsa (7-9%)</div>
+                <input type="number" id="calc-rate" class="input-control" value="8" min="0" max="40" step="0.5">
+              </div>
+
+              <div class="form-group">
+                <label for="calc-years">Horizonte Temporal (Años):</label>
+                <div class="input-desc">Años que mantendrás la inversión</div>
+                <input type="number" id="calc-years" class="input-control" value="20" min="1" max="50">
+              </div>
+            </div>
+
+            <!-- Panel de Resultados -->
+            <div class="results-panel">
+              <h4>Proyección Final Estimada:</h4>
+              <div class="result-item">
+                <span class="result-label">Capital Total Aportado por ti:</span>
+                <span class="result-value" id="res-invested" style="color: #64748b;">€62.000</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Intereses / Rendimientos Ganados:</span>
+                <span class="result-value" id="res-interest" style="color: #0284c7;">€85.342</span>
+              </div>
+              <div class="result-item" style="border-top: 2px solid #059669; padding-top: 14px;">
+                <span class="result-label" style="font-size: 1.1rem; font-weight: 700;">Patrimonio Total Acumulado:</span>
+                <span class="result-value" id="res-total">€147.342</span>
+              </div>
+            </div>
+
+            <div class="chart-container">
+              <span style="font-size: 0.85rem; font-weight: 600; color: #475569; display: block; margin-bottom: 8px;">
+                Crecimiento Proyectado: Gris (Aportaciones) vs Verde (Patrimonio Total con Intereses)
+              </span>
+              <canvas id="compound-chart" style="width: 100%; height: 220px;"></canvas>
+            </div>
+          </form>
+        </section>
+
+        <!-- Bloque AdSense Dentro del Feed de Contenido -->
+        <div class="ad-slot-wrapper">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-box in-article-banner" data-ad-slot="inArticle"></div>
+        </div>
+
+        <!-- Artículos y Guías Destacadas -->
+        <section class="articles-section">
+          <div class="section-header">
+            <h2>Artículos Esenciales de Finanzas</h2>
+            <p>Aprende paso a paso con nuestras guías rigurosas y explicadas con lenguaje sencillo.</p>
+          </div>
+
+          <div class="cards-grid">
+            <!-- Artículo 1 -->
+            <article class="card">
+              <span class="card-tag">Interés Compuesto</span>
+              <h3><a href="articulos/interes-compuesto-guia.html">Cómo Funciona el Interés Compuesto y por qué es la Clave de la Riqueza</a></h3>
+              <p>Comprende la fórmula matemática y las simulaciones reales que explican cómo pequeños ahorros constantes se convierten en sumas millonarias con el paso del tiempo.</p>
+              <div class="card-meta">
+                <span>Por Equipo Editorial</span>
+                <span>Lectura: 8 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="card">
+              <span class="card-tag">Ahorro y Seguridad</span>
+              <h3><a href="articulos/fondo-de-emergencia-paso-a-paso.html">Fondo de Emergencia: Cuánto Dinero Necesitas y Dónde Guardarlo</a></h3>
+              <p>Evita endeudarte ante imprevistos laborales o de salud. Conoce los meses exactos de gastos que debes apartar y las mejores cuentas remuneradas.</p>
+              <div class="card-meta">
+                <span>Por Equipo Editorial</span>
+                <span>Lectura: 6 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="card">
+              <span class="card-tag">Inversión Pasiva</span>
+              <h3><a href="articulos/fondos-indexados-principiantes.html">Guía de Fondos Indexados para Principiantes: Invierte en el Mundo</a></h3>
+              <p>Descubre qué es el MSCI World o el S&P 500, cómo minimizar las comisiones bancarias y la estrategia DCA (Dollar Cost Averaging) recomendada por Warren Buffett.</p>
+              <div class="card-meta">
+                <span>Por Equipo Editorial</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="card">
+              <span class="card-tag">Presupuesto Personal</span>
+              <h3><a href="articulos/regla-50-30-20-finanzas.html">La Regla 50/30/20: El Método Más Sencillo para Administrar tu Salario</a></h3>
+              <p>Organiza tus ingresos entre necesidades básicas (50%), gustos personales (30%) y ahorro/inversión (20%) sin sentirte privado de disfrutar la vida.</p>
+              <div class="card-meta">
+                <span>Por Laura Gómez</span>
+                <span>Lectura: 7 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 5 (Nuevo) -->
+            <article class="card">
+              <span class="card-tag">Cripto vs Bolsa</span>
+              <h3><a href="articulos/guia-criptomonedas-vs-bolsa-inversion.html">Criptomonedas vs Bolsa: ¿Dónde Conviene Invertir tu Dinero?</a></h3>
+              <p>Comparativa exhaustiva entre Bitcoin, fondos indexados y acciones tradicionales. Riesgo, volatilidad, rentabilidad y fiscalidad.</p>
+              <div class="card-meta">
+                <span>Por Martín Valenzuela</span>
+                <span>Lectura: 11 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 6 (Nuevo) -->
+            <article class="card">
+              <span class="card-tag">Desendeudamiento</span>
+              <h3><a href="articulos/como-salir-de-deudas-metodo-bola-de-nieve-y-avalancha.html">Cómo Salir de Deudas: Método Bola de Nieve vs Avalancha</a></h3>
+              <p>Aprende a eliminar préstamos y tarjetas de crédito paso a paso combinando psicología financiera y matemáticas.</p>
+              <div class="card-meta">
+                <span>Por Laura Gómez</span>
+                <span>Lectura: 8 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 7 (Nuevo) -->
+            <article class="card">
+              <span class="card-tag">Jubilación</span>
+              <h3><a href="articulos/planes-de-pensiones-vs-fondos-indexados.html">Planes de Pensiones vs Fondos Indexados para la Jubilación</a></h3>
+              <p>Análisis de la trampa fiscal del rescate bancario frente a la liquidez y ventajas de los fondos de inversión.</p>
+              <div class="card-meta">
+                <span>Por Martín Valenzuela</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 8 (Nuevo) -->
+            <article class="card">
+              <span class="card-tag">Ahorro Doméstico</span>
+              <h3><a href="articulos/trucos-para-ahorrar-en-la-factura-de-la-luz-y-gas.html">Ahorra hasta un 40% en tus Facturas de Electricidad y Gas</a></h3>
+              <p>Ajuste de potencia contratada, eliminación del consumo fantasma y hábitos energéticos de impacto inmediato.</p>
+              <div class="card-meta">
+                <span>Por Laura Gómez</span>
+                <span>Lectura: 7 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 9 -->
+            <article class="card">
+              <span class="card-tag">Presupuesto Consciente</span>
+              <h3><a href="articulos/metodo-kakebo-ahorro-japones-presupuesto.html">El Método Kakebo: La Filosofía Japonesa para Ahorrar hasta un 35%</a></h3>
+              <p>Descubre las 4 preguntas esenciales, las 4 categorías fijas y por qué el registro manual transforma la relación psicológica con el dinero.</p>
+              <div class="card-meta">
+                <span>Por Laura Gómez</span>
+                <span>Lectura: 9 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 10 -->
+            <article class="card">
+              <span class="card-tag">Planificación Total</span>
+              <h3><a href="articulos/presupuesto-base-cero-guia-paso-a-paso.html">Presupuesto de Base Cero: Cómo Asignar un Propósito a Cada Euro</a></h3>
+              <p>Ingresos menos gastos igual a cero: cómo erradicar el dinero ocioso que desaparece sin control y organizar fondos de amortización.</p>
+              <div class="card-meta">
+                <span>Por Laura Gómez</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 11 -->
+            <article class="card">
+              <span class="card-tag">Ahorro Sin Riesgo</span>
+              <h3><a href="articulos/cuentas-remuneradas-vs-depositos-plazo-fijo.html">Cuentas Remuneradas vs Depósitos a Plazo Fijo: Dónde Guardar tu Dinero</a></h3>
+              <p>Comparativa técnica sobre rentabilidad sin riesgo, protección del FGD hasta 100.000 €, TIN vs TAE y liquidez inmediata.</p>
+              <div class="card-meta">
+                <span>Por Martín Valenzuela</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 12 -->
+            <article class="card">
+              <span class="card-tag">Microfugas</span>
+              <h3><a href="articulos/como-eliminar-gastos-hormiga-tabla-calculo.html">La Trampa de los Gastos Hormiga: Ahorra Más de 2.000€ al Año</a></h3>
+              <p>Descubre el impacto real de los cafés, snacks y suscripciones olvidadas proyectados a 10 años con interés compuesto y plan de choque.</p>
+              <div class="card-meta">
+                <span>Por Martín Valenzuela</span>
+                <span>Lectura: 9 min</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Caja de Suscripción a la Newsletter -->
+          <div class="newsletter-box">
+            <h3>📬 Únete a la Comunidad FinanZen</h3>
+            <p>Recibe cada domingo nuestras mejores guías de inversión pasiva, análisis financiero y trucos de ahorro directamente en tu bandeja de entrada.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Escribe tu correo electrónico..." required>
+              <button type="submit">Suscribirme Gratis</button>
+            </form>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Barra Lateral (Sidebar) -->
+      <aside class="sidebar">
+        
+        <!-- Bloque AdSense en Barra Lateral -->
+        <div class="ad-slot-wrapper" style="margin-top: 0;">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-box sidebar-banner" data-ad-slot="sidebar"></div>
+        </div>
+
+        <!-- Widget: Otras Calculadoras -->
+        <div class="widget">
+          <h3 class="widget-title">Otras Calculadoras</h3>
+          <ul class="widget-list">
+            <li><a href="herramientas/index.html#regla-503020">🧮 Calculadora Regla 50/30/20</a></li>
+            <li><a href="herramientas/index.html#calculadora-prestamos">🏦 Simulador de Cuota de Préstamo</a></li>
+            <li><a href="herramientas/index.html#calculadora-ahorro">🎯 Calculadora de Metas de Ahorro</a></li>
+          </ul>
+        </div>
+
+        <!-- Widget: Temas Populares -->
+        <div class="widget">
+          <h3 class="widget-title">Categorías Principales</h3>
+          <ul class="widget-list">
+            <li><a href="articulos/interes-compuesto-guia.html">📈 Inversión a Largo Plazo</a></li>
+            <li><a href="articulos/fondo-de-emergencia-paso-a-paso.html">🛡️ Fondo de Seguridad</a></li>
+            <li><a href="articulos/fondos-indexados-principiantes.html">🌍 Fondos Indexados y ETFs</a></li>
+            <li><a href="articulos/regla-50-30-20-finanzas.html">📊 Presupuestos Mensuales</a></li>
+          </ul>
+        </div>
+
+        <!-- Widget de Autor y Transparencia E-E-A-T -->
+        <div class="widget" style="background: #f8fafc;">
+          <h3 class="widget-title">Sobre FinanZen</h3>
+          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin-bottom: 12px;">
+            FinanZen es un recurso educativo independiente fundado por analistas y divulgadores de finanzas. Revisamos minuciosamente cada artículo para ofrecer información verídica y neutral.
+          </p>
+          <a href="sobre-nosotros.html" style="font-size: 0.88rem; font-weight: 700;">Conoce a nuestro equipo &rarr;</a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Bloque AdSense Inferior -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box footer-banner" data-ad-slot="footer"></div>
+    </div>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>📈 FinanZen</h3>
+          <p>Portal educativo orientado a la democratización de las finanzas personales, la inversión inteligente y el ahorro estratégico.</p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #94a3b8;">
+            Aviso: Los contenidos de FinanZen tienen fines puramente informativos y didácticos. No constituyen asesoramiento financiero personalizado.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="herramientas/index.html">Calculadoras</a></li>
+            <li><a href="articulos/interes-compuesto-guia.html">Guía de Inversión</a></li>
+            <li><a href="articulos/fondos-indexados-principiantes.html">Fondos Indexados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Transparencia</h4>
+          <ul>
+            <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+            <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
+            <li><a href="sobre-nosotros.html">Quiénes Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Editorial</h4>
+          <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 8px;">¿Dudas, sugerencias o correcciones?</p>
+          <p style="font-size: 0.9rem; font-weight: 600; color: #ffffff;">contacto@finanzen-portal.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FinanZen. Todos los derechos reservados.</p>
+        <p>Optimizado para Google AdSense y estándares web modernos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Banner de Consentimiento de Cookies (Requisito AdSense / RGPD) -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        Utilizamos cookies técnicas y de personalización publicitaria para analizar el tráfico del sitio y mostrar anuncios relevantes a través de Google AdSense y sus socios publicitarios autorizados. Puedes consultar los detalles en nuestra <a href="politica-de-cookies.html">Política de Cookies</a> y <a href="politica-de-privacidad.html">Política de Privacidad</a>.
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.88rem;">Aceptar Todas</button>
+        <button id="cookie-decline" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;">Solo Necesarias</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/ads-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

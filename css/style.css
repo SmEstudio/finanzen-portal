@@ -1,0 +1,1222 @@
+/* ==========================================================================
+   FinanZen - Finanzas Personales, Inversión & Patrimonio
+   DISEÑO EXCLUSIVO: Swiss Wealth & Wall Street Financial Editorial (Prestige)
+   ========================================================================== */
+
+:root {
+  /* Paleta Exclusiva: Banca Privada Suiza & Alta Editorial Financiera */
+  --primary: #064e3b;          /* Deep Alpine / Forest Green */
+  --primary-hover: #022c22;
+  --primary-light: #ecfdf5;
+  --primary-border: #a7f3d0;
+  
+  --secondary: #0f172a;        /* Oxford Charcoal */
+  --secondary-soft: #334155;
+  
+  --gold: #b45309;             /* Antique Brass / Gold */
+  --gold-hover: #92400e;
+  --gold-bright: #d97706;
+  --gold-light: #fef3c7;
+  --gold-border: #fde68a;
+  
+  --text-main: #1e293b;        /* Crisp Charcoal */
+  --text-muted: #576574;       /* Editorial Muted */
+  --text-heading: #062b21;
+  
+  --bg-main: #fcfbf7;          /* Fine Linen / Warm Parchment */
+  --bg-card: #ffffff;          /* Pure White Card */
+  --bg-surface: #f7f5ed;       /* Warm Editorial Surface */
+  --bg-dark: #022c22;          /* Royal Forest Dark */
+  
+  --border: #e6e2d8;           /* Brass Hairline Border */
+  --border-focus: #b45309;
+  --border-gold: #d97706;
+  
+  --ad-bg: #f9f8f4;
+  --ad-border: #dcd7ca;
+  
+  --shadow-sm: 0 1px 3px rgba(6, 78, 59, 0.05);
+  --shadow-md: 0 6px 18px -2px rgba(6, 78, 59, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 18px 36px -4px rgba(6, 78, 59, 0.12), 0 6px 12px -2px rgba(180, 83, 9, 0.08);
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  
+  --font-serif: 'Playfair Display', 'Merriweather', 'Georgia', 'Cambria', serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(#064e3b08 1px, transparent 1px),
+    linear-gradient(to right, rgba(180, 83, 9, 0.02) 1px, transparent 1px);
+  background-size: 28px 28px, 120px 120px;
+  color: var(--text-main);
+  line-height: 1.75;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .calculator-title, .article-title, .section-header h2, .footer-brand h3 {
+  font-family: var(--font-serif);
+  color: var(--text-heading);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Cabecera Masthead Editorial de Finanzas
+   ========================================================================== */
+.site-header {
+  background: #ffffff;
+  border-top: 4px solid var(--primary);
+  border-bottom: 2px solid var(--gold-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(6, 78, 59, 0.04);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  color: #fef3c7;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.2);
+  border: 1px solid var(--gold);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+.nav-links a {
+  color: var(--secondary-soft);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  background: var(--bg-surface);
+  border-bottom: 2px solid var(--gold);
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: var(--primary);
+  background: var(--primary-light);
+  border-bottom: 2px solid var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Contenedores AdSense (100% compatibles con políticas de Google)
+   ========================================================================== */
+.ad-slot-wrapper {
+  margin: 28px auto;
+  text-align: center;
+  max-width: 100%;
+  clear: both;
+}
+
+.ad-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.ad-box {
+  background: var(--ad-bg);
+  border: 1px dashed var(--ad-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  margin: 0 auto;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.ad-box.header-banner {
+  max-width: 728px;
+  min-height: 90px;
+}
+
+.ad-box.sidebar-banner {
+  max-width: 300px;
+  min-height: 250px;
+}
+
+.ad-box.in-article-banner {
+  max-width: 100%;
+  min-height: 120px;
+}
+
+.ad-box.footer-banner {
+  max-width: 970px;
+  min-height: 90px;
+}
+
+.ad-placeholder-text {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Hero Section: Editorial Financiero de Alta Gama
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 85%, #047857 100%);
+  color: #ffffff;
+  border-bottom: 3px solid var(--gold);
+  padding: 65px 0 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(217, 119, 6, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(254, 243, 199, 0.15);
+  color: #fef3c7;
+  border: 1px solid var(--gold-border);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  font-size: 1.18rem;
+  color: #d1fae5;
+  margin-bottom: 30px;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  border: 1px solid #fde68a;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #b45309 0%, #92400e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(180, 83, 9, 0.45);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: var(--primary);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Ticker Tape Financiero
+   ========================================================================== */
+.ticker-tape {
+  background: #022c22;
+  color: #f8fafc;
+  padding: 10px 0;
+  font-size: 0.86rem;
+  border-bottom: 2px solid var(--gold);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Diseño de Contenido Principal y Sidebar
+   ========================================================================== */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  margin: 44px 0;
+}
+
+.main-layout.single-column {
+  grid-template-columns: 1fr;
+  max-width: 880px;
+  margin: 44px auto;
+}
+
+/* Secciones y Tarjetas de Artículos (Dossier Financiero) */
+.section-header {
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-border);
+  border-top-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+  background: #ffffff;
+}
+
+.card-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #92400e;
+  background: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  padding: 4px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.card h3 a {
+  color: var(--secondary);
+}
+
+.card h3 a:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.card p {
+  color: var(--secondary-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   Calculadora de Patrimonio (Widget Terminal Suizo)
+   ========================================================================== */
+.calculator-box {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 34px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 38px;
+}
+
+.calculator-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.calculator-desc {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  font-size: 0.98rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.form-group .input-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.input-control {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fdfbf7;
+  color: var(--text-main);
+  outline: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.input-control:focus {
+  border-color: var(--gold);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.15);
+}
+
+.results-panel {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  color: #ffffff;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  margin-top: 28px;
+  box-shadow: 0 6px 18px rgba(6, 78, 59, 0.25);
+}
+
+.results-panel h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fef3c7;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(254, 243, 199, 0.2);
+  padding-bottom: 8px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-weight: 500;
+  color: #d1fae5;
+  font-size: 0.95rem;
+}
+
+.result-value {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fef3c7;
+}
+
+.chart-container {
+  margin-top: 28px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Sidebar Widgets (Análisis & Mercados)
+   ========================================================================== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.widget {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.widget-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.widget-list {
+  list-style: none;
+}
+
+.widget-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1ece1;
+}
+
+.widget-list li:last-child {
+  border-bottom: none;
+}
+
+.widget-list a {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget-list a:hover {
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   Contenido de Artículos (Editorial E-E-A-T)
+   ========================================================================== */
+.article-header {
+  margin-bottom: 34px;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs a {
+  color: var(--primary);
+}
+
+.article-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.22;
+  margin-bottom: 20px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--border);
+}
+
+.author-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: var(--primary);
+  color: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border: 1px solid var(--gold);
+}
+
+.table-of-contents {
+  background: #fbf9f2;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  padding: 22px 28px;
+  margin: 30px 0;
+}
+
+.toc-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.table-of-contents ul {
+  padding-left: 20px;
+}
+
+.table-of-contents li {
+  margin-bottom: 8px;
+}
+
+.table-of-contents a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.table-of-contents a:hover {
+  color: var(--gold);
+}
+
+.article-body {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #2c3e50;
+}
+
+.article-body h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 40px 0 18px;
+  padding-top: 14px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.article-body h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 30px 0 14px;
+}
+
+.article-body p {
+  margin-bottom: 22px;
+}
+
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 28px;
+}
+
+.article-body li {
+  margin-bottom: 10px;
+}
+
+.callout {
+  background: #f8faf4;
+  border-left: 4px solid var(--primary);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 30px 0;
+}
+
+.callout-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.article-footer {
+  margin-top: 45px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.disclaimer-box {
+  background: #fdfaf0;
+  border: 1px solid var(--gold-border);
+  border-left: 4px solid var(--gold);
+  padding: 18px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: #78350f;
+  margin: 30px 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Tablas de Comparación Financiera
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+th {
+  background: var(--primary);
+  color: #ffffff;
+  font-family: var(--font-serif);
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold);
+}
+
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+tr:nth-child(even) {
+  background-color: #faf8f2;
+}
+
+tr:hover {
+  background-color: #f4efe2;
+}
+
+/* ==========================================================================
+   Acordeón de Preguntas Frecuentes (FAQ Accordion)
+   ========================================================================== */
+.faq-accordion {
+  margin: 30px 0;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 22px;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.faq-question:hover {
+  background: #fbf9f2;
+  color: var(--gold);
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--gold);
+  transition: transform 0.2s;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 22px 20px;
+  color: var(--secondary-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   Newsletter & Boletín de Inversión
+   ========================================================================== */
+.newsletter-box {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  color: #ffffff;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  margin: 45px 0;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.newsletter-box h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fef3c7;
+  margin-bottom: 12px;
+}
+
+.newsletter-box p {
+  font-size: 1.05rem;
+  color: #d1fae5;
+  max-width: 620px;
+  margin: 0 auto 24px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-border);
+  font-size: 1rem;
+  outline: none;
+  background: #ffffff;
+}
+
+.newsletter-form button {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #fde68a;
+  padding: 14px 26px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.newsletter-form button:hover {
+  background: #92400e;
+}
+
+/* ==========================================================================
+   Páginas Legales & Formularios
+   ========================================================================== */
+.legal-content {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-content h1 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.legal-content .last-updated {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.legal-content h2 {
+  font-size: 1.45rem;
+  color: var(--primary);
+  margin: 28px 0 14px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   Footer Institucional
+   ========================================================================== */
+.site-footer {
+  background: #022c22;
+  color: #cbd5e1;
+  padding: 65px 0 32px;
+  margin-top: 65px;
+  border-top: 3px solid var(--gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-brand p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #94a3b8;
+}
+
+.footer-col h4 {
+  color: #fef3c7;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #fef3c7;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Banner de Cookies (Requisito AdSense / GDPR)
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #022c22;
+  color: #ffffff;
+  padding: 22px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  border-top: 2px solid var(--gold);
+  display: none;
+}
+
+.cookie-content {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.cookie-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 0.92rem;
+  color: #d1fae5;
+}
+
+.cookie-text a {
+  color: #fef3c7;
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Barra de Progreso de Lectura
+   ========================================================================== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d97706, #047857);
+  width: 0%;
+  z-index: 99999;
+  transition: width 0.1s ease;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 992px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .article-title {
+    font-size: 2rem;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 2px solid var(--gold);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .main-nav.active {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

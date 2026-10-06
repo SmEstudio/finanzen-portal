@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadoras Financieras Gratuitas - FinanZen</title>
+  <meta name="description" content="Colección completa de calculadoras financieras: calcula tu interés compuesto, distribuye tu salario con la regla 50/30/20 y simula la cuota de tu hipoteca o préstamo.">
+  <link rel="canonical" href="https://finanzen-portal.com/herramientas/">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">📈</div>
+        Finan<span>Zen</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Calculadoras</a></li>
+          <li><a href="../articulos/interes-compuesto-guia.html">Interés Compuesto</a></li>
+          <li><a href="../articulos/fondos-indexados-principiantes.html">Inversión</a></li>
+          <li><a href="../articulos/fondo-de-emergencia-paso-a-paso.html">Ahorro</a></li>
+          <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Superior AdSense -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box header-banner" data-ad-slot="header"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="breadcrumbs" style="margin-top: 20px;">
+      <a href="../index.html">Inicio</a> &gt; <span>Herramientas y Calculadoras</span>
+    </div>
+  </div>
+
+  <!-- Contenido de Calculadoras -->
+  <main class="container">
+    <div class="main-layout single-column">
+      
+      <div class="section-header" style="text-align: center; margin-bottom: 35px;">
+        <span class="badge">Herramientas Gratuitas</span>
+        <h1>Suite de Calculadoras y Simuladores Financieros</h1>
+        <p>Utilidades interactivas para tomar decisiones fundamentadas con números reales.</p>
+      </div>
+
+      <!-- Calculadora 1: Interés Compuesto -->
+      <section id="interes-compuesto" class="calculator-box">
+        <h2 class="calculator-title">1. Calculadora de Interés Compuesto</h2>
+        <p class="calculator-desc">Modela el crecimiento de tus inversiones a lo largo del tiempo con aportaciones periódicas.</p>
+
+        <form id="compound-calc-form" onsubmit="event.preventDefault();">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="calc-initial">Capital Inicial (€):</label>
+              <input type="number" id="calc-initial" class="input-control" value="3000" min="0" step="100">
+            </div>
+            <div class="form-group">
+              <label for="calc-monthly">Aportación Mensual (€):</label>
+              <input type="number" id="calc-monthly" class="input-control" value="300" min="0" step="25">
+            </div>
+            <div class="form-group">
+              <label for="calc-rate">Rendimiento Anual Estimado (%):</label>
+              <input type="number" id="calc-rate" class="input-control" value="8" min="0" max="40" step="0.5">
+            </div>
+            <div class="form-group">
+              <label for="calc-years">Horizonte (Años):</label>
+              <input type="number" id="calc-years" class="input-control" value="25" min="1" max="50">
+            </div>
+          </div>
+
+          <div class="results-panel">
+            <h4>Resultado Proyectado:</h4>
+            <div class="result-item">
+              <span class="result-label">Capital Aportado:</span>
+              <span class="result-value" id="res-invested" style="color: #64748b;">€93.000</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Intereses Ganados:</span>
+              <span class="result-value" id="res-interest" style="color: #0284c7;">€196.221</span>
+            </div>
+            <div class="result-item" style="border-top: 2px solid #059669; padding-top: 14px;">
+              <span class="result-label" style="font-weight: 700;">Patrimonio Total:</span>
+              <span class="result-value" id="res-total">€289.221</span>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="compound-chart" style="width: 100%; height: 220px;"></canvas>
+          </div>
+        </form>
+      </section>
+
+      <!-- Bloque AdSense Intermedio -->
+      <div class="ad-slot-wrapper">
+        <span class="ad-label">Publicidad</span>
+        <div class="ad-box in-article-banner" data-ad-slot="inArticle"></div>
+      </div>
+
+      <!-- Calculadora 2: Regla 50/30/20 -->
+      <section id="regla-503020" class="calculator-box">
+        <h2 class="calculator-title">2. Calculadora de Presupuesto 50/30/20</h2>
+        <p class="calculator-desc">Ingresa tu ingreso neto mensual después de impuestos para saber cuánto destinar a cada categoría.</p>
+
+        <form id="budget-calc-form" onsubmit="event.preventDefault();">
+          <div class="form-group" style="max-width: 320px;">
+            <label for="budget-income">Ingreso Neto Mensual Total (€):</label>
+            <input type="number" id="budget-income" class="input-control" value="1800" min="0" step="50">
+          </div>
+
+          <div class="results-panel" style="background: #eff6ff; border-color: #bfdbfe;">
+            <h4 style="color: #1e40af;">Distribución Recomendada de tu Dinero:</h4>
+            <div class="result-item" style="border-color: #bfdbfe;">
+              <div>
+                <strong style="color: #1e3a8a;">50% Necesidades Básicas:</strong>
+                <div style="font-size: 0.8rem; color: #64748b;">Vivienda, suministros, comida básica, transporte indispensable.</div>
+              </div>
+              <span class="result-value" id="budget-needs" style="color: #2563eb;">€900</span>
+            </div>
+            <div class="result-item" style="border-color: #bfdbfe;">
+              <div>
+                <strong style="color: #1e3a8a;">30% Deseos y Calidad de Vida:</strong>
+                <div style="font-size: 0.8rem; color: #64748b;">Salidas, suscripciones, ocio, vacaciones, ropa no esencial.</div>
+              </div>
+              <span class="result-value" id="budget-wants" style="color: #7c3aed;">€540</span>
+            </div>
+            <div class="result-item" style="border-color: #bfdbfe; border-top: 2px solid #2563eb; padding-top: 14px;">
+              <div>
+                <strong style="color: #1e3a8a;">20% Ahorro e Inversión:</strong>
+                <div style="font-size: 0.8rem; color: #64748b;">Fondo de emergencia, aportaciones a fondos indexados, pago deuda.</div>
+              </div>
+              <span class="result-value" id="budget-savings" style="color: #059669;">€360</span>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Calculadora 3: Préstamos e Hipotecas -->
+      <section id="calculadora-prestamos" class="calculator-box">
+        <h2 class="calculator-title">3. Simulador de Cuota de Préstamo o Hipoteca</h2>
+        <p class="calculator-desc">Calcula la cuota mensual aproximada según el sistema de amortización francés (cuota constante).</p>
+
+        <form id="loan-calc-form" onsubmit="event.preventDefault();">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="loan-amount">Monto del Préstamo (€):</label>
+              <input type="number" id="loan-amount" class="input-control" value="150000" min="1000" step="5000">
+            </div>
+            <div class="form-group">
+              <label for="loan-rate">Tipo de Interés Anual (TIN %):</label>
+              <input type="number" id="loan-rate" class="input-control" value="3.2" min="0.1" max="25" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="loan-years">Plazo de Amortización (Años):</label>
+              <input type="number" id="loan-years" class="input-control" value="25" min="1" max="40">
+            </div>
+          </div>
+
+          <div class="results-panel" style="background: #fdf2f8; border-color: #fbcfe8;">
+            <h4 style="color: #9d174d;">Resumen de Financiación:</h4>
+            <div class="result-item" style="border-color: #fbcfe8;">
+              <span class="result-label" style="color: #831843;">Cuota Mensual Estimada:</span>
+              <span class="result-value" id="loan-monthly-payment" style="color: #db2777;">€727,15</span>
+            </div>
+            <div class="result-item" style="border-color: #fbcfe8;">
+              <span class="result-label" style="color: #831843;">Total a Devolver (Capital + Intereses):</span>
+              <span class="result-value" id="loan-total-repaid" style="color: #64748b;">€218.145,21</span>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Nueva Herramienta 4: Test de Salud Financiera -->
+      <section id="test-salud-financiera" class="quiz-box">
+        <span class="badge">Diagnóstico Interactivo</span>
+        <h2 class="calculator-title">4. Test de Salud Financiera (Evalúa tu Nivel)</h2>
+        <p class="calculator-desc">Responde a 4 preguntas básicas para conocer tu puntuación de solidez patrimonial y recomendaciones de mejora.</p>
+
+        <form id="financial-quiz-form" onsubmit="event.preventDefault();">
+          <div class="quiz-question">
+            <label>1. ¿De cuántos meses de gastos básicos dispones en tu fondo de emergencia?</label>
+            <select class="input-control">
+              <option value="25">6 meses o más (+25 pts)</option>
+              <option value="15" selected>De 3 a 5 meses (+15 pts)</option>
+              <option value="8">De 1 a 2 meses (+8 pts)</option>
+              <option value="0">Menos de 1 mes o nada (0 pts)</option>
+            </select>
+          </div>
+
+          <div class="quiz-question">
+            <label>2. ¿Tienes deudas con tipos de interés altos (tarjetas de crédito, préstamos rápidos)?</label>
+            <select class="input-control">
+              <option value="25" selected>No, cero deudas de consumo (+25 pts)</option>
+              <option value="10">Tengo deudas pero las tengo controladas (+10 pts)</option>
+              <option value="0">Sí, pago intereses elevados cada mes (0 pts)</option>
+            </select>
+          </div>
+
+          <div class="quiz-question">
+            <label>3. ¿Qué porcentaje de tus ingresos netos ahorras e inviertes cada mes?</label>
+            <select class="input-control">
+              <option value="25">Más del 20% (+25 pts)</option>
+              <option value="15" selected>Entre el 10% y el 20% (+15 pts)</option>
+              <option value="8">Menos del 10% (+8 pts)</option>
+              <option value="0">Cero o vivo al día (0 pts)</option>
+            </select>
+          </div>
+
+          <div class="quiz-question">
+            <label>4. ¿Inviertes de forma pasiva a largo plazo (fondos indexados, ETFs, planes)?</label>
+            <select class="input-control">
+              <option value="25" selected>Sí, de forma periódica y automatizada (+25 pts)</option>
+              <option value="10">De vez en cuando (+10 pts)</option>
+              <option value="0">No, todo mi dinero está en cuenta corriente (0 pts)</option>
+            </select>
+          </div>
+
+          <div class="results-panel" style="background: #f0fdf4; border-color: #86efac; text-align: center;">
+            <h4 style="color: #166534;">Tu Puntuación de Salud Financiera:</h4>
+            <div id="quiz-score-val" class="quiz-score-badge">80 / 100</div>
+            <div id="quiz-score-msg" style="font-weight: 700; font-size: 1.05rem;">
+              🏆 ¡Excelente! Tu salud financiera es robusta y tienes bases de inversión sólidas.
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Banner Inferior AdSense -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box footer-banner" data-ad-slot="footer"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>📈 FinanZen</h3>
+          <p>Herramientas interactivas para una toma de decisiones financieras transparente y fundamentada.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html">Calculadoras</a></li>
+            <li><a href="../articulos/interes-compuesto-guia.html">Artículos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../politica-de-privacidad.html">Privacidad</a></li>
+            <li><a href="../terminos-y-condiciones.html">Términos</a></li>
+            <li><a href="../politica-de-cookies.html">Cookies</a></li>
+            <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p style="font-size: 0.9rem; color: #ffffff;">contacto@finanzen-portal.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FinanZen. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        Utilizamos cookies analíticas y publicitarias mediante Google AdSense. Consulta nuestra <a href="../politica-de-cookies.html">Política de Cookies</a>.
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/ads-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
