@@ -7,16 +7,16 @@
  *    - Cambia `enabled: true`
  *    - Coloca tu Publisher ID en `client` (ejemplo: 'ca-pub-1234567890123456')
  *    - Asigna los IDs de tus bloques de anuncios en `slots`
- * 2. Si `enabled: false`, el sitio mostrará elegantes contenedores reservados de
+ * 2. Si `enabled: true`, el sitio mostrará elegantes contenedores reservados de
  *    prueba cumpliendo con la política de etiquetas "PUBLICIDAD" de Google.
  */
 
 const ADS_CONFIG = {
   // Tu identificador de editor de Google AdSense
-  client: "ca-pub-XXXXXXXXXXXXXXXX",
+  client: "ca-pub-7959072629123030",
   
   // Activar anuncios reales (true) o modo maquetación previa (false)
-  enabled: false,
+  enabled: true,
 
   // IDs de los bloques de anuncios creados en tu panel de Google AdSense
   slots: {
